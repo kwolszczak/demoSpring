@@ -12,7 +12,8 @@ public class SportController {
     private Coach myCoach;
 
     @Autowired
-    public SportController(@Qualifier("cricketCoach") Coach myCoach) {
+   // public SportController(@Qualifier("swimCoach") Coach myCoach) {
+    public SportController(@Qualifier("aquatic") Coach myCoach) {
         this.myCoach = myCoach;
     }
 

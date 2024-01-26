@@ -50,6 +50,19 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>-->
+<!--HIBERANTE is default implementation of JPA(standard, wytyczne do translacji obiektow,klas na bazy dancyh, tabele itp) in spring-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.1.214</version>
+            <!--            <version>2.2.224</version>-->
+        </dependency>
+
     </dependencies>
 
     <build>
