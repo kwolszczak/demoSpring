@@ -24,7 +24,7 @@ public class StudentDAOImpl implements StudentDAO {
     public List<Student> findAll() {
         //it using JPQL , Student to nazwa entity a nie nazwa tabeli
         // "FROM Student where firstName = :parametr"  //fristName to nazwa pola w entity a nie w bazie danych
-        TypedQuery<Student> query =entityManager.createQuery("FROM Student", Student.class);
+        TypedQuery<Student> query =entityManager.createQuery("FROM Student order by lastName", Student.class);
         return query.getResultList();
     }
 
