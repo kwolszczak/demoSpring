@@ -1,4 +1,4 @@
-package dev.kwolszczak.demo.common;
+package dev.kwolszczak.demo.sport.common;
 
 public interface Coach {
 

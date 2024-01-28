@@ -1,12 +1,13 @@
-package dev.kwolszczak.demo.controller;
+package dev.kwolszczak.demo.sport.rest;
 
-import dev.kwolszczak.demo.common.Coach;
+import dev.kwolszczak.demo.sport.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+//  @RequestMapping("/main")  //mapowanie, na dodatkowy adres dla endpoint : localhost:port/app-properties/main
 public class DemoController {
 
     //@Autowired //3. option of dependency injection by field. Not recommended, legacy

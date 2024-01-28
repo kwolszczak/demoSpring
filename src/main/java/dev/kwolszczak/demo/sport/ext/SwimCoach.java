@@ -1,4 +1,6 @@
-package dev.kwolszczak.demo.common;
+package dev.kwolszczak.demo.sport.ext;
+
+import dev.kwolszczak.demo.sport.common.Coach;
 
 //no @Component annotation - for purpose . It's 3rd party library, we don't have access to this code
 //it can be added as jar file from external repo

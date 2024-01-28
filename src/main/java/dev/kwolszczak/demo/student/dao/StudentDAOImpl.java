@@ -1,6 +1,6 @@
-package dev.kwolszczak.demo.dao;
+package dev.kwolszczak.demo.student.dao;
 
-import dev.kwolszczak.demo.entity.Student;
+import dev.kwolszczak.demo.student.entity.Student;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;

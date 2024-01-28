@@ -1,7 +1,7 @@
-package dev.kwolszczak.demo.config;
+package dev.kwolszczak.demo.sport.config;
 
-import dev.kwolszczak.demo.common.Coach;
-import dev.kwolszczak.demo.common.SwimCoach;
+import dev.kwolszczak.demo.sport.common.Coach;
+import dev.kwolszczak.demo.sport.ext.SwimCoach;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

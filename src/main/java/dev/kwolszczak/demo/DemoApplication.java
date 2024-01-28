@@ -1,20 +1,19 @@
 package dev.kwolszczak.demo;
 
-import dev.kwolszczak.demo.dao.StudentDAO;
-import dev.kwolszczak.demo.entity.Student;
-import dev.kwolszczak.demo.poligon.dao.PersonDAO;
-import dev.kwolszczak.demo.poligon.entity.Person;
+import dev.kwolszczak.demo.student.dao.StudentDAO;
+import dev.kwolszczak.demo.student.entity.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-/* // for scanning diffrent locations than default to find @components and injection
+ // for scanning diffrent locations than default to find @components and injection
 @SpringBootApplication(
 		scanBasePackages = {"dev.kwolszczak.demo",
-							"dev.kwolszczak.util"}
-)*/
-@SpringBootApplication
+							"dev.kwolszczak.employee",
+							"dev.kwolszczak.poligon"}
+)
+//@SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) {
@@ -22,7 +21,7 @@ public class DemoApplication {
 	}
 
 	@Bean
-	public CommandLineRunner commandLineRunner(StudentDAO studentDAO, PersonDAO dao) {
+	public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
 		return runner->{
 			System.out.println("Hello World");
 		//	saveStudent(studentDAO);
@@ -30,9 +29,6 @@ public class DemoApplication {
 			getAllStudents(studentDAO);
 			updateStudent(studentDAO);
 			//deleteStudent(studentDAO);
-			System.out.println("--------POLIGON-----------------");
-		//	savePerson(dao);
-			findIt(dao);
 		} ;
 	}
 
@@ -58,20 +54,6 @@ public class DemoApplication {
 		//display the updated student
 		System.out.println(studentDAO.findById(studentId));
 
-	}
-
-	private void findIt(PersonDAO dao) {
-		var person =dao.findByName("Angelina");
-		System.out.println("I founded her: ");
-		System.out.println(person);
-	}
-
-	private void savePerson(PersonDAO dao) {
-		Person thePerson = new Person();
-		thePerson.setFirstName("Angelina");
-		thePerson.setLastName("Jolie");
-		thePerson.setEmail("ajolie@holywood.com");
-		dao.save(thePerson);
 	}
 
 	private void getAllStudents(StudentDAO studentDAO) {

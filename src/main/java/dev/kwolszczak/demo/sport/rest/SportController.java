@@ -1,6 +1,6 @@
-package dev.kwolszczak.demo.controller;
+package dev.kwolszczak.demo.sport.rest;
 
-import dev.kwolszczak.demo.common.Coach;
+import dev.kwolszczak.demo.sport.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;

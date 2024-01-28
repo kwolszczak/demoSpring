@@ -1,7 +1,8 @@
-package dev.kwolszczak.demo.entity;
+package dev.kwolszczak.demo.student.entity;
 
 import jakarta.persistence.*;
 
+//POJO class
 @Entity
 @Table(name = "student")
 public class Student {
@@ -20,6 +21,12 @@ public class Student {
     private String email;
 
     public Student() {
+    }
+
+    public Student(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
     }
 
     public long getId() {

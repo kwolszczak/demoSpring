@@ -23,6 +23,16 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!--//spring data REST will scan for JpaRepository and create controller for you-->
+        <!--you can remove restController and service-->
+        <!--//1. dependiency data-rest
+        //2.rpository JPA interface-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+
+
         <!--you can check depdencies in each pack in maven Dependencies on the right side-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -62,6 +72,15 @@
             <version>2.1.214</version>
             <!--            <version>2.2.224</version>-->
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+
 
     </dependencies>
 
