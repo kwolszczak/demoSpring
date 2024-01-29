@@ -56,10 +56,10 @@
         </dependency>
 
         <!--security for actuator for example-->
-    <!--    <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>-->
+        </dependency>
 <!--HIBERANTE is default implementation of JPA(standard, wytyczne do translacji obiektow,klas na bazy dancyh, tabele itp) in spring-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
