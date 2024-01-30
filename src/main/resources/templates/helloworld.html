@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <!--@- access to root folder-->
+    <link rel="stylesheet" th:href="@{/css/demo.css}" />
+</head>
+<body>
+<div th:text="'date on the server is: ' + ${theDate}" class="funny">Hello world</div>
+<!--<p th:tex="'Time on the server is ' + ${theDate} />-->
+
+</body>
+</html>
