@@ -7,8 +7,13 @@
     <link rel="stylesheet" th:href="@{/css/demo.css}" />
 </head>
 <body>
-<div th:text="'date on the server is: ' + ${theDate}" class="funny">Hello world</div>
-<!--<p th:tex="'Time on the server is ' + ${theDate} />-->
+<div th:text="'Hello my dear friend: ' + ${theName}" class="funny">
+</div>
+<div>
+    <br>
+    Student name: <span th:text="${param.studentName}"/>
+    <p th:text="'Time on the server is ' + ${theDate}" >No time information on the server</p>
+</div>
 
 </body>
 </html>

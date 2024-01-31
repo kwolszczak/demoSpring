@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+</head>
+<body>
+<h3>Student Registration Form</h3>
+
+<form method="POST" th:action="@{/processStudentForm}" th:object="${student}">
+    First name: <input type="text" name="firstName" placeholder="What's your name" th:field="*{firstName}">
+    <br><br>
+    Last name: <input name="lastName" placeholder="What's your last name" th:field="${student.lastName}">
+    <br><br>
+    Country
+    <select class="form-select" aria-label="Default select example" th:field="${student.country}">
+        <option value="Poland">Poland</option>
+        <option value="Brazil">Brazil</option>
+        <option value="European Union">EU</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+    </select>
+    <br><br>
+    Place of Birth
+    <select class="form-select" aria-label="Default select example" th:field="${student.city}">
+        <option th:each="c : ${cities}"
+                th:text="${c}"
+                th:value="${c}">
+        </option>
+    </select>
+    <br><br>
+    Favourite Programming Language
+    <input type="radio"
+           th:each="l : ${languages}"
+           th:field="*{favouriteLanguage}"
+           th:text="${l}"
+           th:value="${l}"/>
+
+    <!--<input type="radio" th:field="*{favouriteLanguage}" th:value="GO">GO</input>
+    <input type="radio" th:field="*{favouriteLanguage}" th:value="Java">Java</input>
+    <input type="radio" th:field="*{favouriteLanguage}" th:value="Python">Python</input>-->
+    <br><br>
+    <input type="submit" value="OK">
+</form>
+
+</body>
+</html>

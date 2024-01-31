@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Info</title>
+</head>
+<body>
+Welcome my student <span th:text="${param.firstName}" ></span> from <span th:text="${param.country}" ></span>
+
+<br>
+Your name: <span th:text="${student.firstName}" />
+<br>
+Your last name: <span th:text="${student.lastName}" />
+<br>
+Country: <span th:text="${student.country}" />
+<br>
+City of Birth: <span th:text="${student.city}" />
+<br>
+Favourite language: <span th:text="${student.favouriteLanguage}" />
+</body>
+</html>
